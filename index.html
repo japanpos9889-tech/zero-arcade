@@ -1207,7 +1207,7 @@ function statLine(){const S=stats(),days=Object.keys(S.days).length,min=Math.rou
 function statsExport(){return JSON.stringify({v:1,stats:stats(),dly:CFG.dly||null});}
 
 /* ctr: anonymous player counter · sends only an event name (open/new/finish/d1) + source (s1/s2/mz/direct) · no ids, no personal data · active only on the GitHub Pages copy */
-var CTR_URL='__CTR_URL__';
+var CTR_URL='https://zero-arcade.japanpos9889.workers.dev/e';
 var CTR={src:'direct'};
 (function(){try{var h=(location.hash||'').slice(1);if(/^(s1|s2|mz)$/.test(h)){CTR.src=h;localStorage.setItem('zctr_src',h);}else{CTR.src=localStorage.getItem('zctr_src')||'direct';}}catch(e){}})();
 function ctrDayNum(){return Math.floor((Date.now()-new Date().getTimezoneOffset()*60000)/864e5);}
